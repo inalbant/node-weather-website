@@ -11,7 +11,7 @@ export const getForecast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        `It is currently ${body.current.temperature} degrees C, but feels like ${body.current.feelslike} degrees.`
+        `It is currently ${body.current.weather_descriptions[0]} with temperatures of ${body.current.temperature} degrees C, feels like ${body.current.feelslike} degrees.`
       );
     }
   });
